@@ -24,8 +24,9 @@ new_sting = profile__sting[0:8]+'-'+profile__sting[8:12]+'-'+profile__sting[12:1
 ####
 profile_data = requests.get(f'https://yappy.media/api/profile/{new_sting}').json()
 # Данные о профиле
-st.write('Никнейм',profile_data['nickname'])
-
+st.write('Никнейм:',profile_data['nickname'])
+st.write(f'Подписчиков:{profile_data['subscribers']}')
+st.write(f'Подписок:{profile_data['subscriptions']}')
 
 ####
 data = requests.get(f'https://yappy.media/api/video-list/{new_sting}').json()
