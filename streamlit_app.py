@@ -27,6 +27,9 @@ profile_data = requests.get(f'https://yappy.media/api/profile/{new_sting}').json
 st.write('Никнейм:',profile_data['nickname'])
 st.write('Подписчиков:',profile_data['subscribers'])
 st.write('Подписок:',profile_data['subscriptions'])
+st.write('Лайков у постов:',profile_data['143765'])
+st.write('Реюзы:',profile_data['passiveReuseCount'])
+st.write('Коллабы:',profile_data['collabsCount'])
 
 ####
 data = requests.get(f'https://yappy.media/api/video-list/{new_sting}').json()
