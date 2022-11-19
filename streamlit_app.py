@@ -19,6 +19,8 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 
-#profile = st.text_input('Укажите ID-аккаунта')
-data = requests.get(f'https://yappy.media/api/video-list/65e4a7a9-2518-4697-b94a-0992430c036a').json()
+profile__sting = st.text_input('Укажите ID-аккаунта')
+new_sting = profile__sting[0:8]+'-'+profile__sting[9:13]+'-'+profile__sting[14:18]+'-'+profile__sting[19:23]+'-'+profile__sting[24:32]
+
+data = requests.get(f'https://yappy.media/api/video-list/{new_sting}').json()
 st.dataframe(pd.DataFrame(pd.DataFrame(data['data']['results'])))
