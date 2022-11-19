@@ -21,4 +21,4 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 #profile = st.text_input('Укажите ID-аккаунта')
 data = requests.get(f'https://yappy.media/api/video-list/65e4a7a9-2518-4697-b94a-0992430c036a').json()
-#st.dataframe(pd.DataFrame(pd.DataFrame(data['data']['results'])))
+st.dataframe(pd.DataFrame(pd.DataFrame(data['data']['results'])))
