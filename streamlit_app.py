@@ -18,4 +18,6 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 
-profile = st.text_input('Укажите имя')
+profile = st.text_input('Укажите ID-аккаунта')
+data = requests.get(f'https://yappy.media/api/video-list/{profile}').json()
+st.dataframe(pd.DataFrame(pd.DataFrame(data['data']['results'])))
