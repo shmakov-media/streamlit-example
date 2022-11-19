@@ -29,7 +29,6 @@ else:
 
 ####
 profile_data = requests.get(f'https://yappy.media/api/profile/{new_string}').json()
-profile_data
 
 ####
 profile_data = requests.get(f'https://yappy.media/api/profile/{new_string}').json()
