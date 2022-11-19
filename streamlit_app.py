@@ -32,7 +32,7 @@ profile_data = requests.get(f'https://yappy.media/api/profile/{new_string}').jso
 profile_data
 
 ####
-profile_data = requests.get(f'https://yappy.media/api/profile/{new_sting}').json()
+profile_data = requests.get(f'https://yappy.media/api/profile/{new_string}').json()
 # Данные о профиле
 st.write('Никнейм:',profile_data['nickname'])
 st.write('Подписчиков:',profile_data['subscribers'])
@@ -42,5 +42,5 @@ st.write('Реюзы:',profile_data['passiveReuseCount'])
 st.write('Коллабы:',profile_data['collabsCount'])
 
 ####
-data = requests.get(f'https://yappy.media/api/video-list/{new_sting}').json()
+data = requests.get(f'https://yappy.media/api/video-list/{new_string}').json()
 st.dataframe(pd.DataFrame(pd.DataFrame(data['data']['results'])))
