@@ -19,7 +19,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 
-profile__sting = st.text_input('Укажите ID-аккаунта')
+profile_string = st.text_input('Укажите ID-аккаунта')
 
 if '-' in profile_string:
     new_string = profile_string
