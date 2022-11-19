@@ -21,11 +21,15 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 profile__sting = st.text_input('Укажите ID-аккаунта')
 
-if '-' in profile__sting:
-    new_string = profile__sting
+if '-' in profile_string:
+    new_string = profile_string
 else:
-    new_sting = profile__sting[0:8]+'-'+profile__sting[8:12]+'-'+profile__sting[12:16]+'-'+profile__sting[16:20]+'-'+profile__sting[20:32]
+    new_string = profile_string[0:8]+'-'+profile_string[8:12]+'-'+profile_string[12:16]+'-'+profile_string[16:20]+'-'+profile_string[20:32]
 
+
+####
+profile_data = requests.get(f'https://yappy.media/api/profile/{new_string}').json()
+profile_data
 
 ####
 profile_data = requests.get(f'https://yappy.media/api/profile/{new_sting}').json()
